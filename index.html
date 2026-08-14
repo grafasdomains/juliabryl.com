@@ -1,35 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Julia Bryl - make-up artists</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Original Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+        /* =========================
+           ORIGINAL PAGE SETTINGS
+           ========================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            /* Original Elementor background */
+            background-color: transparent;
+            background-image: radial-gradient(
+                at center center,
+                #FFFFFF 0%,
+                #C0FFEE 100%
+            );
+
+            color: #7A7A7A;
+
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            background-color: transparent;
+            text-decoration: none;
+        }
+
+        img {
+            border-style: none;
+            height: auto;
+            max-width: 100%;
+        }
+
+        /* =========================
+           MAIN ELEMENTOR CONTAINER
+           ========================= */
+
+        .page-container {
+            display: flex;
+
+            min-height: 95vh;
+
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: flex-start;
+
+            gap: 15px 0;
+
+            margin: 0;
+            padding: 0;
+
+            /*
+             * Original Elementor boxed container.
+             * Global Elementor container width was 1140px.
+             */
+            width: 100%;
+            max-width: 1140px;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* =========================
+           LOGO
+           ========================= */
+
+        .logo {
+            display: block;
+
+            width: 130px;
+            height: 88px;
+
+            object-fit: contain;
+
+            padding: 0 0 20px 0;
+
+            margin: 0;
+        }
+
+        /* =========================
+           TITLE
+           ========================= */
+
+        .title {
+            margin: 0;
+            padding: 0;
+
+            color: #000000;
+
+            font-family: "Playfair Display", serif;
+
+            font-weight: 100;
+
+            /*
+             * Elementor heading widget itself
+             * does not define a custom size in post-10.css.
+             * The original heading widget default is used.
+             */
+            line-height: 1;
+        }
+
+        /* =========================
+           DESCRIPTION
+           ========================= */
+
+        .description {
+            margin: 0;
+            padding: 0;
+
+            /*
+             * Elementor text editor inherits the page font.
+             */
+            line-height: 1.5;
+        }
+
+        /* =========================
+           DIVIDER
+           ========================= */
+
+        .divider-widget {
+            width: 100%;
+
+            margin: 0;
+            padding: 0 0 10px 0;
+        }
+
+        .divider {
+            width: 150px;
+
+            height: 1px;
+
+            margin-top: 2px;
+            margin-bottom: 2px;
+
+            background-color: #54595F4D;
+        }
+
+        /* =========================
+           INSTAGRAM
+           ========================= */
+
+        .instagram-wrapper {
+            text-align: center;
+        }
+
+        .instagram {
+            display: inline-block;
+
+            color: #7A7A7A;
+
+            font-size: 35px;
+
+            line-height: 1;
+        }
+
+        .instagram svg {
+            display: block;
+
+            width: 35px;
+            height: 35px;
+
+            fill: #7A7A7A;
+        }
+
+        /* =========================
+           MOBILE
+           Original:
+           --content-width: 80vw
+           ========================= */
+
+        @media (max-width: 767px) {
+
+            .page-container {
+                width: 80vw;
+                max-width: none;
+
+                margin-left: auto;
+                margin-right: auto;
+
+                padding: 0;
+            }
+
+        }
+    </style>
 </head>
 
 <body>
 
-    <main class="page">
-        <div class="content">
+    <main class="page-container">
 
-            <img
-                src="css/logo.png"
-                class="logo"
-                width="130"
-                height="88"
-                alt="Julia Bryl"
-            >
+        <!-- Original logo: 130 x 88 -->
+        <img
+            class="logo"
+            src="css/logo.png"
+            width="130"
+            height="88"
+            alt=""
+        >
 
-            <h1>Julia Bryl - makeup artist</h1>
+        <!-- Original heading -->
+        <h1 class="title">
+            Julia Bryl - makeup artist
+        </h1>
 
-            <p class="description">
-                World Champion at the international contest in Las Vegas in 2002.
-            </p>
+        <!-- Original text -->
+        <p class="description">
+            World Champion at the international contest in Las Vegas in 2002.
+        </p>
 
+        <!-- Original divider -->
+        <div class="divider-widget">
             <div class="divider"></div>
+        </div>
 
+        <!-- Original Instagram icon -->
+        <div class="instagram-wrapper">
             <a
                 class="instagram"
                 href="https://www.instagram.com/juliabryl_makeup/"
@@ -37,12 +248,16 @@
                 rel="noopener noreferrer"
                 aria-label="Instagram"
             >
-                <svg viewBox="0 0 448 512" aria-hidden="true">
+                <svg
+                    aria-hidden="true"
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
                     <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/>
                 </svg>
             </a>
-
         </div>
+
     </main>
 
 </body>
